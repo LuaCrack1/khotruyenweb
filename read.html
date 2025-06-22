@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Đọc truyện - Lê Thái Tổ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white max-w-2xl mx-auto p-6">
+  <h1 class="text-2xl font-bold mb-4">📖 Lê Thái Tổ – Chữ Hán (10/9/1385)</h1>
+
+  <img src="images/demo.jpg" class="w-full rounded border mb-4" alt="Minh họa lịch sử" />
+
+  <div class="flex justify-center gap-2 mb-4">
+    <button onclick="setVoice('bac')" class="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700">Giọng Bắc</button>
+    <button onclick="setVoice('trung')" class="bg-yellow-600 text-white px-4 py-1 rounded hover:bg-yellow-700">Giọng Trung</button>
+    <button onclick="setVoice('nam')" class="bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700">Giọng Nam</button>
+  </div>
+
+  <audio id="audioPlayer" controls class="w-full mb-4">
+    <source src="audio/bac/le_thai_to.mp3" type="audio/mpeg">
+    Trình duyệt không hỗ trợ audio.
+  </audio>
+
+  <p class="text-justify leading-relaxed whitespace-pre-line">
+Lê Thái Tổ là người khai sáng triều Hậu Lê, sinh ngày 10 tháng 9 năm 1385.
+
+Ông đã lãnh đạo cuộc khởi nghĩa Lam Sơn chống lại ách đô hộ của nhà Minh, khôi phục nền độc lập cho Đại Việt. 
+Sau khi đánh đuổi quân Minh, ông lên ngôi hoàng đế và bắt đầu thời kỳ phát triển rực rỡ trong lịch sử dân tộc.
+
+Bài đọc chữ Hán gốc được ghi lại để tưởng nhớ và tôn vinh công lao của ông trong việc dựng nước và giữ nước.
+  </p>
+
+  <script>
+    function setVoice(region) {
+      const audio = document.getElementById("audioPlayer");
+      audio.src = `audio/${region}/le_thai_to.mp3`;
+      audio.play();
+    }
+  </script>
+</body>
+</html>
